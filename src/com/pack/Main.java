@@ -1,4 +1,7 @@
-import com.pack.Product;
+package com.pack;
+
+import com.pack.models.Product;
+
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -16,10 +19,18 @@ public class Main {
             System.out.println("i = " + i);
         }
 
+        // Create two instances of the Product class.
         Product product1 = new Product("Keyboard",16.99f);
         Product product2 = new Product("Mouse",5.99f);
+        Product product3 = new Product("Monitor",99.99f);
+
+        // Print the name of the first product and the price of the second product, calling the functions getName() and getPrice().
         System.out.println(product1.getName());
         System.out.println(product2.getPrice());
+        System.out.println(product3.getProductID());
+
+        // Print all parameters of the first product as json:
+        System.out.println(product1.toJson());
 
     }
 }
